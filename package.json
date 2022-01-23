@@ -1,0 +1,24 @@
+{
+    "name": "bill-splitting-app",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.html",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "sass": "sass --watch scss/main.scss:css/styles.css"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/douglasF5/bill-splitting-app.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/douglasF5/bill-splitting-app/issues"
+    },
+    "homepage": "https://github.com/douglasF5/bill-splitting-app#readme",
+    "devDependencies": {
+        "sass": "^1.49.0"
+    }
+}
