@@ -1,0 +1,40 @@
+@use "./partials/reset";
+@use "./partials/colors";
+@use "./partials/typography" as text;
+@use "./partials/controls-section";
+
+:root {
+  // SETTING UP THEMABLE COLOR CUSTOM PROPERTIES
+  @each $color, $value in colors.$base-colors {
+    --c-#{$color}: #{$value};
+  }
+
+  // SETTING UP COMMOM COLOR CUSTOM PROPERTIES
+  @each $color, $value in colors.$common-colors {
+    --c-cm-#{$color}: #{$value};
+  }
+}
+
+body {
+  background-color: var(--c-surface-primary);
+  color: var(--c-on-surface-primary);
+  font-family: text.$font-face;
+}
+
+.content-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 51rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--c-surface-secondary);
+  box-shadow: 0px 21px 21px 0px hsla(0, 0%, 0%, 0.08);
+}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <script type="module" defer src="./js/main.js"></script>
+    <title>Splitter</title>
+  </head>
+  <body>
+    <div id="root" class="content-wrapper">
+      <main class="content">
+        <div class="controls-section">
+          <header class="controls-header">
+            <h1 class="heading">Splitter</h1>
+            <button class="btn btn-theme">
+              <svg class="btn-icon">
+                <use
+                  xlink:href="assets/icons.svg#circle-lefthalf-filled-icon"
+                />
+              </svg>
+            </button>
+          </header>
+          <div class="number-fields">
+            <div class="input-wrapper">
+              <label class="input-label" for="bill-amount">Bill</label>
+              <input
+                class="input"
+                name="bill-amount"
+                type="number"
+                step="0.1"
+                placeholder="0.00"
+              />
+              <div class="input-field-icon">$</div>
+            </div>
+            <div class="input-wrapper">
+              <label class="input-label" for="people-amount">People</label>
+              <input
+                class="input"
+                name="people-amount"
+                type="number"
+                step="1"
+                placeholder="0"
+              />
+              <div class="input-field-icon">
+                <svg>
+                  <use xlink:href="assets/icons.svg#smiley-icon" />
+                </svg>
+              </div>
+            </div>
+          </div>
+          <div class="options-fields">
+            <p class="input-label">Select Tip %</p>
+            <div class="tip-options">
+              <div class="tip-option">
+                <label for="opt1">5%</label>
+                <input id="opt1" type="radio" name="tip" value="5%" />
+              </div>
+              <div class="tip-option">
+                <label for="opt2">10%</label>
+                <input id="opt2" type="radio" name="tip" value="10%" />
+              </div>
+              <div class="tip-option">
+                <label for="opt3">15%</label>
+                <input id="opt3" type="radio" name="tip" value="15%" />
+              </div>
+              <div class="tip-option">
+                <label for="opt4">25%</label>
+                <input id="opt4" type="radio" name="tip" value="25%" />
+              </div>
+              <div class="tip-option">
+                <label for="opt5">50%</label>
+                <input id="opt5" type="radio" name="tip" value="50%" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="results-section">
+          <div class="results-header">
+            <div class="final-result">
+              <span>$ 55.00</span>
+              <p>Total per person</p>
+            </div>
+            <div class="results-controls">
+              <button>expand</button>
+              <button>reset</button>
+            </div>
+            <div class="results-details">
+              <div class="results-detail">
+                <span>Total (Bill + Tip)</span>
+                <span>$ 165.00)</span>
+              </div>
+              <div class="results-detail">
+                <span>Bill</span>
+                <span>$ 150.00)</span>
+              </div>
+              <div class="results-detail">
+                <span>Tip</span>
+                <span>$ 15.00)</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,86 @@
+@use "colors";
+@use "typography" as text;
+@use "btn";
+
+.controls-section {
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  @include text.t-display("L");
+}
+
+.number-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-label {
+  @include text.t-base("M", "medium", "one-liner");
+}
+
+.input {
+  @include text.t-base("L", "bold", "one-liner");
+  width: 100%;
+  max-height: 2.75rem;
+  display: inline-block;
+  padding: 0.75rem;
+  border: solid 1px var(--c-outline-primary);
+  border-radius: 0.25rem;
+  background-color: var(--c-over-surface-primary);
+  color: var(--c-on-surface-primary);
+  transition: box-shadow 100ms ease-in-out;
+
+  &:active,
+  &:focus-visible {
+    outline: none;
+    border: solid 1px var(--c-accent);
+    box-shadow: 0px 0px 0px 4px hsla(172, 88%, 64%, 0.24);
+  }
+
+  &::placeholder {
+    @include text.t-base("L", "bold", "one-liner");
+    color: var(--c-on-surface-quaternary);
+  }
+}
+
+.input-field-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 2.65rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--c-on-surface-secondary);
+  pointer-events: none;
+
+  & svg {
+    width: 1rem;
+    height: 1rem;
+    fill: var(--c-on-surface-secondary);
+  }
+}
+
+.options-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}

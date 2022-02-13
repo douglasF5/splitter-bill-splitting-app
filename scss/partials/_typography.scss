@@ -1,0 +1,38 @@
+$font-face: "Space Grotesk", sans-serif;
+
+$font-weights: (
+  "regular": 400,
+  "medium": 500,
+  "bold": 600,
+);
+
+$display-sizes: (
+  "L": 2rem,
+  "S": 1.5rem,
+);
+
+$base-sizes: (
+  "L": 1.25rem,
+  "M": 1rem,
+  "S": 0.8125rem,
+);
+
+@function getLineHeight($flag) {
+  @if $flag == "one-liner" {
+    @return 100%;
+  } @else {
+    @return $flag;
+  }
+}
+
+@mixin t-display($size) {
+  font-size: map-get($display-sizes, $size);
+  font-weight: 700;
+  line-height: 100%;
+}
+
+@mixin t-base($size, $weight, $height: 135%) {
+  font-size: map-get($base-sizes, $size);
+  font-weight: map-get($font-weights, $weight);
+  line-height: getLineHeight($height);
+}
