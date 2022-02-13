@@ -1,3 +1,253 @@
+/* GLOBAL RESET */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
 
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role=list],
+ol[role=list] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+input[type=number] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.btn {
+  border: none;
+  cursor: pointer;
+}
+.btn:active {
+  transform: translateY(8%);
+}
+
+.btn-theme {
+  max-width: 2.25rem;
+  max-height: 2.25rem;
+  padding: 0.5rem;
+  background-color: var(--c-over-surface-primary);
+  border-radius: 1.125rem;
+  transition: background-color 100ms ease-in-out;
+}
+.btn-theme:hover {
+  background-color: var(--c-over-surface-secondary);
+}
+
+.btn-icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  fill: var(--c-accent);
+}
+
+.controls-section {
+  max-width: 23rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 100%;
+}
+
+.number-fields {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.input-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.input-label {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 100%;
+}
+
+.input {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+  width: 100%;
+  max-height: 2.75rem;
+  display: inline-block;
+  padding: 0.75rem;
+  border: solid 1px var(--c-outline-primary);
+  border-radius: 0.25rem;
+  background-color: var(--c-over-surface-primary);
+  color: var(--c-on-surface-primary);
+  transition: box-shadow 100ms ease-in-out;
+}
+.input:active, .input:focus-visible {
+  outline: none;
+  border: solid 1px var(--c-accent);
+  box-shadow: 0px 0px 0px 4px rgba(82, 244, 222, 0.24);
+}
+.input::placeholder {
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 100%;
+  color: var(--c-on-surface-quaternary);
+}
+
+.input-field-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 2.65rem;
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: 100%;
+  color: var(--c-on-surface-secondary);
+  pointer-events: none;
+}
+.input-field-icon svg {
+  width: 1rem;
+  height: 1rem;
+  fill: var(--c-on-surface-secondary);
+}
+
+.options-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+:root {
+  --c-accent: #016558;
+  --c-accent-container: #2a3c3a;
+  --c-on-accent-container: #52f4de;
+  --c-over-accent-container: #76f9e8;
+  --c-accent-highlight: rgba(82, 244, 222, 0.24);
+  --c-surface-primary: #eff6f5;
+  --c-surface-secondary: white;
+  --c-surface-tertiary: #dceae8;
+  --c-over-surface-primary: rgba(1, 101, 88, 0.08);
+  --c-over-surface-secondary: rgba(1, 101, 88, 0.12);
+  --c-modal-overlay: rgba(239, 246, 245, 0.68);
+  --c-on-surface-primary: #2a3c3a;
+  --c-on-surface-secondary: rgba(0, 46, 40, 0.73);
+  --c-on-surface-tertiary: rgba(0, 46, 40, 0.56);
+  --c-on-surface-quaternary: rgba(0, 46, 40, 0.32);
+  --c-outline-primary: rgba(1, 101, 88, 0.48);
+  --c-cm-accent: #52f4de;
+  --c-cm-accent-container: #52f4de;
+  --c-cm-on-accent-container: #2a3c3a;
+  --c-cm-surface-tertiary: #2a3c3a;
+  --c-cm-over-surface-primary: rgba(195, 254, 246, 0.06);
+  --c-cm-over-surface-secondary: rgba(195, 254, 246, 0.12);
+  --c-cm-on-surface-primary: white;
+  --c-cm-on-surface-secondary: rgba(235, 255, 252, 0.73);
+  --c-cm-on-surface-tertiary: rgba(235, 255, 252, 0.6);
+  --c-cm-outline-primary: rgba(195, 254, 246, 0.24);
+}
+
+body {
+  background-color: var(--c-surface-primary);
+  color: var(--c-on-surface-primary);
+  font-family: "Space Grotesk", sans-serif;
+}
+
+.content-wrapper {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.content {
+  max-width: 51rem;
+  padding: 2.5rem;
+  display: flex;
+  flex-direction: row;
+  gap: 2.5rem;
+  border-radius: 0.75rem;
+  background-color: var(--c-surface-secondary);
+  box-shadow: 0px 21px 21px 0px rgba(0, 0, 0, 0.08);
+}
 
 /*# sourceMappingURL=styles.css.map */
