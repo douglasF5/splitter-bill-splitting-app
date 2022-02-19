@@ -1,0 +1,62 @@
+@use "../base/typography" as text;
+@use "../base/btn";
+
+.options-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.tip-options {
+  display: grid;
+  grid-template: repeat(2, 1fr) / repeat(3, 1fr);
+  gap: 0.75rem;
+}
+
+.tip-option-field {
+  display: none;
+}
+
+.tip-option {
+  display: flex;
+  position: relative;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  padding: 0.75rem;
+  background-color: var(--c-over-surface-primary);
+  border-radius: 0.25rem;
+  transition: background-color 100ms ease-in-out;
+
+  &:hover {
+    background-color: var(--c-over-surface-secondary);
+  }
+
+  .tip-option-field:checked + & {
+    background-color: var(--c-accent-container);
+  }
+}
+
+.tip-option-label {
+  @include text.t-base("L", "bold", "one-liner");
+  display: inline-block;
+  color: var(--c-accent);
+  cursor: pointer;
+  transition: transform 150ms ease-in-out;
+
+  .tip-option-field:checked + .tip-option > & {
+    transform: translateX(-1.5rem);
+    color: var(--c-on-accent-container);
+  }
+}
+
+.tip-option-icon {
+  @include btn.btn-icon(1rem, var(--c-on-accent-container));
+  display: none;
+  position: absolute;
+  right: 0.75rem;
+
+  .tip-option-field:checked + .tip-option > & {
+    display: block;
+  }
+}

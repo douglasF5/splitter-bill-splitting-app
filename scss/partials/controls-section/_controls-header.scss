@@ -1,0 +1,29 @@
+@use "../base/typography" as text;
+@use "../base/btn";
+
+.controls-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.heading {
+  @include text.t-display("L");
+}
+
+.btn-theme {
+  width: 2.25rem;
+  height: 2.25rem;
+  padding: 0.5rem;
+  background-color: var(--c-over-surface-primary);
+  border-radius: 1.125rem;
+  transition: background-color 100ms ease-in-out;
+
+  &:hover {
+    background-color: var(--c-over-surface-secondary);
+  }
+}
+
+.btn-theme-icon {
+  @include btn.btn-icon(1.25rem, var(--c-accent));
+}

@@ -1,0 +1,14 @@
+.btn {
+  border: none;
+  cursor: pointer;
+
+  &:active {
+    transform: translateY(8%);
+  }
+}
+
+@mixin btn-icon($size, $color) {
+  width: $size;
+  height: $size;
+  fill: $color;
+}

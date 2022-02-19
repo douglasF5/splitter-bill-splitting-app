@@ -21,7 +21,7 @@
           <header class="controls-header">
             <h1 class="heading">Splitter</h1>
             <button class="btn btn-theme">
-              <svg class="btn-icon">
+              <svg class="btn-theme-icon">
                 <use
                   xlink:href="assets/icons.svg#circle-lefthalf-filled-icon"
                 />
@@ -59,52 +59,115 @@
           <div class="options-fields">
             <p class="input-label">Select Tip %</p>
             <div class="tip-options">
-              <div class="tip-option">
-                <label for="opt1">5%</label>
-                <input id="opt1" type="radio" name="tip" value="5%" />
-              </div>
-              <div class="tip-option">
-                <label for="opt2">10%</label>
-                <input id="opt2" type="radio" name="tip" value="10%" />
-              </div>
-              <div class="tip-option">
-                <label for="opt3">15%</label>
-                <input id="opt3" type="radio" name="tip" value="15%" />
-              </div>
-              <div class="tip-option">
-                <label for="opt4">25%</label>
-                <input id="opt4" type="radio" name="tip" value="25%" />
-              </div>
-              <div class="tip-option">
-                <label for="opt5">50%</label>
-                <input id="opt5" type="radio" name="tip" value="50%" />
-              </div>
+              <label class="btn" for="opt1">
+                <input
+                  class="tip-option-field"
+                  id="opt1"
+                  type="radio"
+                  name="tip"
+                  value="5%"
+                />
+                <div class="tip-option">
+                  <span class="tip-option-label">05%</span>
+                  <svg class="tip-option-icon">
+                    <use xlink:href="assets/icons.svg#check-icon" />
+                  </svg>
+                </div>
+              </label>
+              <label class="btn" for="opt2">
+                <input
+                  class="tip-option-field"
+                  id="opt2"
+                  type="radio"
+                  name="tip"
+                  value="5%"
+                />
+                <div class="tip-option">
+                  <span class="tip-option-label">10%</span>
+                  <svg class="tip-option-icon">
+                    <use xlink:href="assets/icons.svg#check-icon" />
+                  </svg>
+                </div>
+              </label>
+              <label class="btn" for="opt3">
+                <input
+                  class="tip-option-field"
+                  id="opt3"
+                  type="radio"
+                  name="tip"
+                  value="5%"
+                />
+                <div class="tip-option">
+                  <span class="tip-option-label">15%</span>
+                  <svg class="tip-option-icon">
+                    <use xlink:href="assets/icons.svg#check-icon" />
+                  </svg>
+                </div>
+              </label>
+              <label class="btn" for="opt4">
+                <input
+                  class="tip-option-field"
+                  id="opt4"
+                  type="radio"
+                  name="tip"
+                  value="5%"
+                />
+                <div class="tip-option">
+                  <span class="tip-option-label">25%</span>
+                  <svg class="tip-option-icon">
+                    <use xlink:href="assets/icons.svg#check-icon" />
+                  </svg>
+                </div>
+              </label>
+              <label class="btn" for="opt5">
+                <input
+                  class="tip-option-field"
+                  id="opt5"
+                  type="radio"
+                  name="tip"
+                  value="5%"
+                />
+                <div class="tip-option">
+                  <span class="tip-option-label">50%</span>
+                  <svg class="tip-option-icon">
+                    <use xlink:href="assets/icons.svg#check-icon" />
+                  </svg>
+                </div>
+              </label>
             </div>
           </div>
         </div>
         <div class="results-section">
           <div class="results-header">
-            <div class="final-result">
-              <span>$ 55.00</span>
-              <p>Total per person</p>
+            <div class="total-per-person">
+              <span class="total-per-person-amount">$ 55.00</span>
+              <p class="total-per-person-label">Total per person</p>
             </div>
             <div class="results-controls">
-              <button>expand</button>
-              <button>reset</button>
+              <!-- <button class="btn btn-results">
+                <svg class="btn-results-icon">
+                  <use xlink:href="assets/icons.svg#chevron-up-icon" />
+                </svg>
+              </button> -->
+              <button class="btn btn-results">
+                <svg class="btn-results-icon">
+                  <use xlink:href="assets/icons.svg#refresh-icon" />
+                </svg>
+              </button>
             </div>
-            <div class="results-details">
-              <div class="results-detail">
-                <span>Total (Bill + Tip)</span>
-                <span>$ 165.00)</span>
-              </div>
-              <div class="results-detail">
-                <span>Bill</span>
-                <span>$ 150.00)</span>
-              </div>
-              <div class="results-detail">
-                <span>Tip</span>
-                <span>$ 15.00)</span>
-              </div>
+          </div>
+          <div class="results-details">
+            <div class="results-detail">
+              <span class="results-detail-label">Total Bill + Tip</span>
+              <span class="results-detail-amount">$ 165.00</span>
+            </div>
+            <div class="results-detail">
+              <span class="results-detail-label">Bill</span>
+              <span class="results-detail-amount">$ 150.00</span>
+            </div>
+            <div class="results-detail">
+              <span class="results-detail-label">Tip</span>
+              <span class="results-detail-amount">$ 15.00</span>
             </div>
           </div>
         </div>

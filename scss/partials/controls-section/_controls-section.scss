@@ -1,0 +1,12 @@
+@forward "controls-header";
+@forward "number-fields";
+@forward "options-fields";
+@use "../base/typography" as text;
+
+.controls-section {
+  display: flex;
+  flex: 0 1 23rem;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+}

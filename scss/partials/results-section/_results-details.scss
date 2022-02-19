@@ -1,0 +1,17 @@
+@use "../base/typography" as text;
+@use "../base/btn";
+
+.results-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding-top: 1.25rem;
+  border-top: solid 1px var(--c-cm-outline-primary);
+}
+
+.results-detail {
+  @include text.t-base("M", "regular", "one-liner");
+  display: flex;
+  justify-content: space-between;
+  color: var(--c-cm-on-surface-tertiary);
+}

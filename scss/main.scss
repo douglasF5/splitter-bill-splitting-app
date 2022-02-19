@@ -1,7 +1,8 @@
-@use "./partials/reset";
-@use "./partials/colors";
-@use "./partials/typography" as text;
-@use "./partials/controls-section";
+@use "./partials/base/reset";
+@use "./partials/base/colors";
+@use "./partials/base/typography" as text;
+@use "./partials/controls-section/controls-section";
+@use "./partials/results-section/results-section";
 
 :root {
   // SETTING UP THEMABLE COLOR CUSTOM PROPERTIES
@@ -30,7 +31,7 @@ body {
 
 .content {
   max-width: 51rem;
-  padding: 2.5rem;
+  padding: 2.5rem 2.5rem 0;
   display: flex;
   flex-direction: row;
   gap: 2.5rem;

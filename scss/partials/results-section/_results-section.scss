@@ -1,0 +1,27 @@
+@forward "./results-header";
+@forward "./results-details";
+@use "../base/typography" as text;
+
+$height: 0.75rem;
+
+.results-section {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 0 1 23rem;
+  padding: 2rem;
+  background-color: var(--c-cm-surface-tertiary);
+}
+
+.results-section::before {
+  content: "";
+  width: 100%;
+  height: $height;
+  top: calc($height * -1);
+  right: 0;
+  position: absolute;
+  background-image: url("../assets/arrow-up.svg");
+  background-repeat: repeat-x;
+  background-position: -6% bottom;
+}

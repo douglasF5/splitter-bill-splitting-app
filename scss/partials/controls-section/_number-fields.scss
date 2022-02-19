@@ -1,23 +1,5 @@
-@use "colors";
-@use "typography" as text;
-@use "btn";
-
-.controls-section {
-  max-width: 23rem;
-  display: flex;
-  flex-direction: column;
-  gap: 2.5rem;
-}
-
-.controls-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.heading {
-  @include text.t-display("L");
-}
+@use "../base/typography" as text;
+@use "../base/btn";
 
 .number-fields {
   width: 100%;
@@ -53,7 +35,7 @@
   &:focus-visible {
     outline: none;
     border: solid 1px var(--c-accent);
-    box-shadow: 0px 0px 0px 4px hsla(172, 88%, 64%, 0.24);
+    box-shadow: 0px 0px 0px 4px var(--c-accent-highlight);
   }
 
   &::placeholder {
@@ -73,14 +55,12 @@
   pointer-events: none;
 
   & svg {
-    width: 1rem;
-    height: 1rem;
-    fill: var(--c-on-surface-secondary);
+    @include btn.btn-icon(1rem, var(--c-on-surface-secondary));
   }
-}
 
-.options-fields {
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
+  .input:focus-visible + &,
+  .input:focus-visible + & > svg {
+    color: var(--c-accent);
+    fill: var(--c-accent);
+  }
 }
