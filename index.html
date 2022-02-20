@@ -37,6 +37,7 @@
                 type="number"
                 step="0.1"
                 placeholder="0.00"
+                data-field-bill
               />
               <div class="input-field-icon">$</div>
             </div>
@@ -47,7 +48,9 @@
                 name="people-amount"
                 type="number"
                 step="1"
-                placeholder="0"
+                placeholder="1"
+                min="1"
+                data-field-people
               />
               <div class="input-field-icon">
                 <svg>
@@ -65,7 +68,8 @@
                   id="opt1"
                   type="radio"
                   name="tip"
-                  value="5%"
+                  value="5"
+                  data-tip-option
                 />
                 <div class="tip-option">
                   <span class="tip-option-label">05%</span>
@@ -80,7 +84,8 @@
                   id="opt2"
                   type="radio"
                   name="tip"
-                  value="5%"
+                  value="10"
+                  data-tip-option
                 />
                 <div class="tip-option">
                   <span class="tip-option-label">10%</span>
@@ -95,7 +100,8 @@
                   id="opt3"
                   type="radio"
                   name="tip"
-                  value="5%"
+                  value="15"
+                  data-tip-option
                 />
                 <div class="tip-option">
                   <span class="tip-option-label">15%</span>
@@ -110,7 +116,8 @@
                   id="opt4"
                   type="radio"
                   name="tip"
-                  value="5%"
+                  value="25"
+                  data-tip-option
                 />
                 <div class="tip-option">
                   <span class="tip-option-label">25%</span>
@@ -125,7 +132,8 @@
                   id="opt5"
                   type="radio"
                   name="tip"
-                  value="5%"
+                  value="50"
+                  data-tip-option
                 />
                 <div class="tip-option">
                   <span class="tip-option-label">50%</span>
@@ -140,7 +148,9 @@
         <div class="results-section">
           <div class="results-header">
             <div class="total-per-person">
-              <span class="total-per-person-amount">$ 55.00</span>
+              <span class="total-per-person-amount" data-total-per-person-amount
+                >$ 0.00</span
+              >
               <p class="total-per-person-label">Total per person</p>
             </div>
             <div class="results-controls">
@@ -149,7 +159,7 @@
                   <use xlink:href="assets/icons.svg#chevron-up-icon" />
                 </svg>
               </button> -->
-              <button class="btn btn-results">
+              <button class="btn btn-results" data-reset>
                 <svg class="btn-results-icon">
                   <use xlink:href="assets/icons.svg#refresh-icon" />
                 </svg>
@@ -159,15 +169,17 @@
           <div class="results-details">
             <div class="results-detail">
               <span class="results-detail-label">Total Bill + Tip</span>
-              <span class="results-detail-amount">$ 165.00</span>
+              <span class="results-detail-amount" data-total-sum-amount
+                >$ 0.00</span
+              >
             </div>
             <div class="results-detail">
               <span class="results-detail-label">Bill</span>
-              <span class="results-detail-amount">$ 150.00</span>
+              <span class="results-detail-amount" data-bill-amount>$ 0.00</span>
             </div>
             <div class="results-detail">
               <span class="results-detail-label">Tip</span>
-              <span class="results-detail-amount">$ 15.00</span>
+              <span class="results-detail-amount" data-tip-amount>$ 0.00</span>
             </div>
           </div>
         </div>
