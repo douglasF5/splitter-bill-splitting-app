@@ -1,17 +1,33 @@
 @forward "./results-header";
 @forward "./results-details";
 @use "../base/typography" as text;
+@use "../base/breakpoints" as brkp;
 
 $height: 0.75rem;
 
 .results-section {
   position: relative;
+  z-index: 2;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   flex: 0 1 23rem;
   padding: 2rem 2rem 2.75rem;
   background-color: var(--c-cm-surface-tertiary);
+  transition: bottom 150ms ease-in-out;
+  border-top: solid 1px var(--c-cm-surface-tertiary);
+
+  @include brkp.x(536) {
+    position: fixed;
+    width: 100%;
+    bottom: -10rem;
+    justify-content: flex-start;
+    gap: 3.5rem;
+
+    &[data-can-expand] {
+      bottom: 0;
+    }
+  }
 }
 
 .results-section::before {
@@ -23,5 +39,5 @@ $height: 0.75rem;
   position: absolute;
   background-image: url("../assets/arrow-up.svg");
   background-repeat: repeat-x;
-  background-position: -6% bottom;
+  background-position: left 20px bottom 1px;
 }

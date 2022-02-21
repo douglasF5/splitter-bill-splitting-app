@@ -1,4 +1,10 @@
 import { $, $all, formatValue, formatCurrency } from "./utils.js";
+import "./modal.js";
+import {
+  settleCustomTipField,
+  radioButtonsContainer,
+  customTipRadioField,
+} from "./custom-tip.js";
 
 //FIELDS
 const billField = $("[data-field-bill]");
@@ -22,10 +28,13 @@ function getTipPercent(data) {
     }
   });
 
+  let customTip = $("[data-tip-custom-option]");
+  if (customTip) checkedValue = customTip.value;
+
   return checkedValue;
 }
 
-function calculateTip(tipPercent) {
+function calculateTip() {
   return (fieldValues.tip / 100) * fieldValues.bill;
 }
 
@@ -45,6 +54,7 @@ optionFields.forEach((field) => {
   field.addEventListener("click", () => {
     updateValues();
     updateUI();
+    settleCustomTipField();
   });
 });
 
@@ -77,6 +87,11 @@ function reset() {
     if (field.checked) field.checked = false;
   });
 
+  $("#custom-tip-radio-input").remove();
+  radioButtonsContainer.append(customTipRadioField(false, "Custom"));
+
   updateValues();
   updateUI();
 }
+
+export { updateValues, updateUI, fieldValues, optionFields };

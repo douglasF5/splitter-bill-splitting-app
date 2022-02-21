@@ -1,11 +1,16 @@
 @use "../base/typography" as text;
 @use "../base/btn";
+@use "../base/breakpoints" as brkp;
 
 .number-fields {
   width: 100%;
   display: flex;
   flex-direction: row;
   gap: 1rem;
+
+  @include brkp.x(536) {
+    flex-direction: column;
+  }
 }
 
 .input-wrapper {

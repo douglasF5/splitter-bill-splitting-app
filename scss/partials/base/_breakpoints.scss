@@ -1,0 +1,17 @@
+@mixin x($size) {
+  @media screen and (max-width: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin y($size) {
+  @media screen and (max-height: #{$size}px) {
+    @content;
+  }
+}
+
+@mixin xy($width, $height) {
+  @media screen and (max-width: #{$width}px) and (max-height: #{$height}px) {
+    @content;
+  }
+}

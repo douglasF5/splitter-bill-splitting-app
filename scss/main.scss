@@ -1,6 +1,7 @@
 @use "./partials/base/reset";
 @use "./partials/base/colors";
 @use "./partials/base/typography" as text;
+@use "./partials/base/breakpoints" as brkp;
 @use "./partials/controls-section/controls-section";
 @use "./partials/results-section/results-section";
 
@@ -27,15 +28,57 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  overflow: auto;
+
+  @include brkp.xy(860, 830) {
+    align-items: flex-start;
+  }
+
+  @include brkp.y(458) {
+    align-items: flex-start;
+  }
 }
 
 .content {
   max-width: 51rem;
   padding: 2.5rem 2.5rem 0;
+  margin: 2rem;
   display: flex;
   flex-direction: row;
   gap: 2.5rem;
   border-radius: 0.75rem;
   background-color: var(--c-surface-secondary);
   box-shadow: 0px 21px 21px 0px hsla(0, 0%, 0%, 0.08);
+
+  @include brkp.x(860) {
+    max-width: 36rem;
+    max-height: 48rem;
+    flex-direction: column;
+  }
+
+  @include brkp.x(536) {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    padding: 2rem 0 0;
+    margin: 0;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+}
+
+.overlay {
+  display: block;
+  position: fixed;
+  z-index: 1;
+  background-color: var(--c-modal-overlay);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  &[data-can-hide] {
+    display: none;
+  }
 }

@@ -1,5 +1,6 @@
 @use "../base/typography" as text;
 @use "../base/btn";
+@use "../base/breakpoints" as brkp;
 
 .options-fields {
   display: flex;
@@ -48,6 +49,31 @@
     transform: translateX(-1.5rem);
     color: var(--c-on-accent-container);
   }
+
+  @include brkp.x(860) {
+    .tip-option-field:checked + .tip-option > & {
+      transform: translateX(-2.75rem);
+    }
+  }
+
+  @include brkp.x(614) {
+    .tip-option-field:checked + .tip-option > & {
+      transform: translateX(-2rem);
+    }
+  }
+
+  @include brkp.x(536) {
+    font-size: 1.125rem;
+    .tip-option-field:checked + .tip-option > & {
+      transform: translateX(-1.5rem);
+    }
+  }
+
+  @include brkp.x(375) {
+    .tip-option-field:checked + .tip-option > & {
+      transform: translateX(-1rem);
+    }
+  }
 }
 
 .tip-option-icon {
@@ -58,5 +84,21 @@
 
   .tip-option-field:checked + .tip-option > & {
     display: block;
+  }
+}
+
+.custom-tip-input-field-icon {
+  position: absolute;
+  right: 0.75rem;
+  top: 0.9rem;
+
+  & svg {
+    @include btn.btn-icon(1rem, var(--c-on-surface-secondary));
+  }
+
+  .input:focus-visible + &,
+  .input:focus-visible + & > svg,
+  &:hover > svg {
+    fill: var(--c-accent);
   }
 }
