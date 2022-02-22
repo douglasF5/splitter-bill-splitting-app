@@ -5,6 +5,7 @@ import {
   radioButtonsContainer,
   customTipRadioField,
 } from "./custom-tip.js";
+import "./color-theme.js";
 
 //FIELDS
 const billField = $("[data-field-bill]");

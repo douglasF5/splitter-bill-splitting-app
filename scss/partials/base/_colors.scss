@@ -1,7 +1,7 @@
 $base-colors: (
   //ACCENT
   "accent": hsla(172, 98%, 20%, 1),
-  "accent-container": hsla(173, 18%, 20%, 1),
+  "accent-container": hsla(190, 18%, 20%, 1),
   "on-accent-container": hsla(172, 88%, 64%, 1),
   "over-accent-container": hsla(172, 92%, 72%, 1),
   "accent-highlight": hsla(172, 88%, 64%, 0.24),
@@ -14,7 +14,7 @@ $base-colors: (
   "over-surface-secondary": hsla(172, 98%, 20%, 0.12),
   "modal-overlay": hsla(171, 28%, 95%, 0.68),
   //ON SURFACE
-  "on-surface-primary": hsla(173, 18%, 20%, 1),
+  "on-surface-primary": hsla(190, 18%, 20%, 1),
   "on-surface-secondary": hsla(172, 100%, 9%, 0.73),
   "on-surface-tertiary": hsla(172, 100%, 9%, 0.56),
   "on-surface-quaternary": hsla(172, 100%, 9%, 0.32),
@@ -26,9 +26,9 @@ $common-colors: (
   //ACCENT
   "accent": hsla(172, 88%, 64%, 1),
   "accent-container": hsla(172, 88%, 64%, 1),
-  "on-accent-container": hsla(173, 18%, 20%, 1),
+  "on-accent-container": hsla(190, 18%, 20%, 1),
   //SURFACE
-  "surface-tertiary": hsla(173, 18%, 20%, 1),
+  "surface-tertiary": hsla(190, 18%, 20%, 1),
   //OVER SURFACE
   "over-surface-primary": hsla(172, 97%, 88%, 0.06),
   "over-surface-secondary": hsla(172, 97%, 88%, 0.12),

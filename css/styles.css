@@ -398,6 +398,8 @@ input::-webkit-inner-spin-button {
   justify-content: space-between;
   flex: 0 1 23rem;
   padding: 2rem 2rem 2.75rem;
+  background-image: url("../assets/noise-texture.png");
+  background-repeat: repeat;
   background-color: var(--c-cm-surface-tertiary);
   transition: bottom 150ms ease-in-out;
   border-top: solid 1px var(--c-cm-surface-tertiary);
@@ -429,7 +431,7 @@ input::-webkit-inner-spin-button {
 
 :root {
   --c-accent: #016558;
-  --c-accent-container: #2a3c3a;
+  --c-accent-container: #2a393c;
   --c-on-accent-container: #52f4de;
   --c-over-accent-container: #76f9e8;
   --c-accent-highlight: rgba(82, 244, 222, 0.24);
@@ -439,15 +441,15 @@ input::-webkit-inner-spin-button {
   --c-over-surface-primary: rgba(1, 101, 88, 0.08);
   --c-over-surface-secondary: rgba(1, 101, 88, 0.12);
   --c-modal-overlay: rgba(239, 246, 245, 0.68);
-  --c-on-surface-primary: #2a3c3a;
+  --c-on-surface-primary: #2a393c;
   --c-on-surface-secondary: rgba(0, 46, 40, 0.73);
   --c-on-surface-tertiary: rgba(0, 46, 40, 0.56);
   --c-on-surface-quaternary: rgba(0, 46, 40, 0.32);
   --c-outline-primary: rgba(1, 101, 88, 0.48);
   --c-cm-accent: #52f4de;
   --c-cm-accent-container: #52f4de;
-  --c-cm-on-accent-container: #2a3c3a;
-  --c-cm-surface-tertiary: #2a3c3a;
+  --c-cm-on-accent-container: #2a393c;
+  --c-cm-surface-tertiary: #2a393c;
   --c-cm-over-surface-primary: rgba(195, 254, 246, 0.06);
   --c-cm-over-surface-secondary: rgba(195, 254, 246, 0.12);
   --c-cm-on-surface-primary: white;

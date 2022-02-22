@@ -108,8 +108,11 @@ function settleCustomTipField() {
 
     if (customTipInputText.value) {
       checkValue = true;
-      labelValue = `${fieldValues.tip}%`;
+      labelValue = `${customTipInputText.value}%`;
     }
+
+    updateValues();
+    updateUI();
 
     customTipInputTextWrapper.remove();
 

@@ -40,4 +40,11 @@ function formatCurrency(value) {
   return amount.replace("$", "$ ");
 }
 
-export { $, $all, formatValue, formatCurrency, createComponent };
+export {
+  $,
+  $all,
+  formatValue,
+  formatCurrency,
+  createComponent,
+  camelToKebabCase,
+};
