@@ -10,7 +10,7 @@ import "./color-theme.js";
 //FIELDS
 const billField = $("[data-field-bill]");
 const peopleField = $("[data-field-people]");
-const optionFields = $all("[data-tip-option]");
+let optionFields = $all("[data-tip-option]");
 
 //FIELDS RAW VALUES
 let fieldValues = {
@@ -23,6 +23,7 @@ let fieldValues = {
 function getTipPercent(data) {
   let checkedValue = "";
 
+  data = $all("[data-tip-option]");
   data.forEach((field) => {
     if (field.checked) {
       checkedValue = field.value;
