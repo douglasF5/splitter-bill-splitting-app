@@ -8,8 +8,6 @@ Implemented features:
 - Responsive layout
 - Configurable color theme
 
-<br>
-
 ## Project screenshots
 
 <img src=".github/project-screenshot-desktop-light-theme.png"><br>
