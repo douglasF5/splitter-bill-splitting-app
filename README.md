@@ -1,6 +1,6 @@
 # Bill-splitting app
 
-Bill-splitting calculator buit with HTML, CSS (SASS) and JavaScript. [Interact with the live project here](https://douglasf5.github.io/bill-splitting-app/).
+Bill-splitting calculator built with HTML, CSS (SASS) and JavaScript. [Interact with the live project here](https://douglasf5.github.io/bill-splitting-app/).
 
 Implemented features:
 
